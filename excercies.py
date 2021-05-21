@@ -194,8 +194,55 @@ for color in colors:
 for idx, item in enumerate(colors):
     print(idx, item)
 
-print(enumerate(colors))
+# print(enumerate(colors))
 
 
+# List Comprehensions 
+
+# Let's create a list of squares
+
+# With a for loop
+
+squares = []
+
+nums = list(range(101))
+
+for num in nums: 
+    square = num * num
+    squares.append(square)
+
+# print(squares)
+
+# With a list comprehension 
+
+squares_alt = [n * n for n in nums]
+
+# print(squares_alt)
+
+# Filter for even squares into a list
+
+even_squares = [n * n for n in nums if (n *n)%2 == 0]
+
+# print(even_squares)
+
+# Tuples in Python
+
+# THey are a list like structure, however they are immutable(Unchangebale) 
+# Tuples are defined by commas
 
 
+phrase = ('hello',)
+
+# print(type(phrase))
+
+# colors_tuple = ('red', 'green', 'blue')
+
+# print(type(colors_tuple))
+
+# They are sequence types
+
+# They can be iterated over very quickly do to their low overhead
+
+colors_tuple = 'red', 'green', 'blue'
+
+print(dir([]))
