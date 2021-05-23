@@ -184,15 +184,14 @@ colors.remove('red')
 # Iterate over a list with a for loop
 
 # Option A - Access the items only
-"""
+
 for color in colors:
     print(color)
-"""
+
 
 # Option B - Access the items and their positions 
 
-for idx, item in enumerate(colors):
-    print(idx, item)
+# for idx, item in enumerate(colors):
 
 # print(enumerate(colors))
 
@@ -237,7 +236,7 @@ phrase = ('hello',)
 
 # colors_tuple = ('red', 'green', 'blue')
 
-# print(type(colors_tuple))
+# print(type(colors_tuple))git 
 
 # They are sequence types
 
@@ -245,4 +244,62 @@ phrase = ('hello',)
 
 colors_tuple = 'red', 'green', 'blue'
 
-print(dir([]))
+
+def first_function():
+  pass
+
+# Assign value returned by default
+result = first_function()
+# print(result)
+
+nums = [1, 2, 3, 4, 5, 6, 7]
+
+odds = list(filter(lambda n: n % 2, nums))
+
+# print(odds)
+
+# print(result)
+
+# *args to accept a varying number of arguments ... just like JS's...
+def add(*args):
+    total = 0 
+    for n in args:
+        total += n
+    return total
+
+result = add (1,2,3,4,5)
+
+# print(result)
+
+
+# **kwargs - key word arguments - name='linda', age=21
+
+"""
+def dev_skills(**kwargs):
+    return kwargs
+
+
+result = dev_skills(HTML=5, CSS=5, JS=5)
+
+print(result)
+"""
+
+def dev_skills_advanced_function(dev_name, company, *args, **kwargs):
+    return {
+        'name': dev_name,
+        'place of work': company,
+        'favorite things': list(args),
+        'skills': kwargs
+    }
+
+developer = dev_skills_advanced_function(
+    'Melba Mouton',
+     'NASA', 
+     'Math', 
+     'Space Exploration',
+      'Loved writing documentation',
+      Leadership=5,
+      Mathmatics=5,
+      Programming=5)
+
+print(developer)
