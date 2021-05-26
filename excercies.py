@@ -302,4 +302,51 @@ developer = dev_skills_advanced_function(
       Mathmatics=5,
       Programming=5)
 
-print(developer)
+# print(developer)
+
+# Python Classes
+
+class Dog():
+    def __init__(self, name, age = 0):
+        self.name = name 
+        self.age = age
+    def __str__(self):
+        return f"Dog name {self.name} is {self.age} years old"
+
+    def bark(self):
+        return "Woof!"
+
+dog1 = Dog('Spot', 1)
+
+# print(dog1.bark())
+
+class Car():
+
+    cars_total = 0
+
+    def __init__(self, vin, make, model, running):
+        self.vin = vin
+        self.make = make
+        self.model = model
+        self.running = False
+        Car.cars_total += 1
+    
+    def __str__(self):
+        return f"This a a {self.make} model {self.model} with a vin of {self.vin}"
+    
+    def start(self):
+        self.running = True
+    
+    def stop(self):
+        self.running = False
+
+    @classmethod
+    def get_total_cars(cls):
+        return cls.cars_total 
+
+car1 = Car('TS123', 'Tesla', 'Model S', False)
+car1 = Car('XYZ123', 'Tesla', 'Model S', False)
+car1 = Car('NOP123', 'Tesla', 'Model S', False)
+
+print(Car.get_total_cars())
+
