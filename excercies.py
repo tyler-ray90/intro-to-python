@@ -348,5 +348,16 @@ car1 = Car('TS123', 'Tesla', 'Model S', False)
 car1 = Car('XYZ123', 'Tesla', 'Model S', False)
 car1 = Car('NOP123', 'Tesla', 'Model S', False)
 
-print(Car.get_total_cars())
+# print(Car.get_total_cars())
 
+class SuperCar(Car):
+    def __init__(self, vin, make, model, running, top_speed):
+        Car.__init__(self, make, model, running)
+        self.top_speed = 186
+
+car4 = SuperCar('FGW345', 'Tesla', 'Roadster', False, 250)
+
+print(car4.start())
+print(car4.running)
+
+print(SuperCar.get_total_cars())
